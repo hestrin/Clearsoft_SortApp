@@ -1,0 +1,28 @@
+
+*******************************************************************
+URUCHOMIENIE PROGRAMU:
+
+Wersja	a)	Aby uruchomić  program należy w konsoli przejść do folderu głównego aplikacji (/SortApp) i wydać polecenie :
+			java -cp bin:json-simple-1.1.1.jar sortApp.Start
+
+Wersja	b) 	Zaimporotwanie pobranego z repozytorium folderu do IDE, np. Eclipse'a.
+
+*******************************************************************
+KOMPILACJA PROGRAMU:
+
+Wersja a) (Rekomendowana)
+	Użycie ant -a: W folderze głównym aplikacji wydać polecenie:
+	ant -buildfile build.xml
+
+Wersja b) W folderze głównym aplikacji wydać polecenie:
+	javac -cp src:json-simple-1.1.1.jar -d bin/  src/sortApp/Start.java 
+	Utworzone zostaną w folderze bin/sortApp/ pliki o rozszerzeniach typu .class dla skompilowanych klas.
+UWAGA: W wersji b) nie kompiluje się niestety test jednostkowy.
+
+********************************************************************
+Uwagi dotyczace programu:
+1. Program używa pliku json-simple-1.1.1.jar do parsowania wyrażeń z jsona. Powoduje to konieczność dołączenia tego pliku przy kompilacji.
+2. Program nie przyjmuje żadnych argumentów na wejściu. Wszystkie parametry są podawane przez użytkownika w trakcie działania programu.
+3. Repozytorium zawiera plik build.xml. Jest plik z którego można zbudować pliki .java za pomocą narzędzia ant.
+4. Repozytorium zawiera oczywiście zbudowane już klasy programu.
+5. Test jednostkowy został stworzony tylko dla jednej funkcji z klasy Start (znajduje się w StartTest.*)
